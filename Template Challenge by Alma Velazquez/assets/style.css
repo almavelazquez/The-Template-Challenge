@@ -383,14 +383,12 @@ h1, h2, h3, h4, h5, h6 {
 #fh5co-blog #guest-blogging > div:nth-child(even) .card-title {
   background: #00a6a6; }
 
-#fh5co-blog .fh5co-video-item {
+#fh5co-blog .fh5co-video-item .card-block {
   background: #fff !important; }
-  #fh5co-blog .fh5co-video-item .fh5co-video-text .card-title {
-    padding: 10px;
-    margin-top: 0px;
-    color: #a3ba05;
-    height: 50px; }
-  #fh5co-blog .fh5co-video-item .fh5co-video-text .card-text {
-    padding: 10px;
-    color: #444;
-    font-size: small; }
+
+#fh5co-blog .fh5co-video-item .card-title {
+  background: #fff !important;
+  color: #00a6a6; }
+
+#fh5co-blog .fh5co-video-item .card-text {
+  font-size: small; }

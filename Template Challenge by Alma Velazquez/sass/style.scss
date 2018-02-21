@@ -604,23 +604,18 @@ h1, h2, h3, h4, h5, h6 {
 
 
 #fh5co-blog {
-
     .fh5co-video-item {
-        background: $brand-white !important;
+        .card-block {
+            background: $brand-white !important;
+        }
 
-        .fh5co-video-text {
-            .card-title {
-                padding: 10px;
-                margin-top: 0px;
-                color: $brand-primary;
-                height: 50px;
-            }
+        .card-title {
+            background: $brand-white !important;
+            color: $brand-secondary;
+        }
 
-            .card-text {
-                padding: 10px;
-                color: $brand-darker;
-                font-size: small;
-            }
+        .card-text {
+            font-size: small;
         }
     }
 }
