@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "blogs": [
+    {
+		    "Title": "Rhubarb: The Vegetable That Acts Like a Fruit",
+		    "Description": "May is all about vegetables on bobblyflay.com and one of the most popular springtime vegetables in rhubarb. That's right, I said vegetable. Did you know that rhubarb is actually a vegetable, not a fruit? While rhubarb is typlically treated like a fruit and most often shows up in desserts in this country, it is also very good in savory dishes too and when used in glazes and chutnet pairs really well with pork, lamb and chicken. But since I could live on pastries (and often do) I love using rhubarb in a variety of desserts."
+	},
+	  {
+	    "Title": "Spirce-Crusted Salmon: A Holiday Dinner That's As Impressibe As It is Quick",
+	    "Description": "Holiday season is well underway, and you know what that means: people are BUSY! With that in mind, I developed a festive recipe that's quick enough to serve on a weeknight (with some manke- aheads), and beautiful and impressive enought to serve as the centerpiece for a holiday meal. We love to serve a shole side of fish-- it makes for a gorgeous presentacion and it feeds a crowd. This one has a spice rub that does double duty, as seasoning for the salmon and as a coating for spiced nuts that get stirred into fluffly jasmine rice."
+	  }
+  ]
+}

@@ -1,31 +1,312 @@
+﻿
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Gila De Lauren &mdash; Gi.La.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Website for Gila de Lauren chef" />
+	<meta name="keywords" content="restaurants, chef, recipes, cooking, food" />
+	<meta name="author" content="Alma Velázquez" />
 
-  <meta charset="utf-8">
-  <title>Getting Started With Gup</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+	
+	
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
 
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/main.css">
 
-</head>
+	<link rel="stylesheet" href="assets/style.css">
+	
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+        <script src="js/handlebars-v4.0.11.js"></script>
+	</head>
+    <body>
+        <header role="banner" id="fh5co-header" >
+            <div class="container">
+                <!-- <div class="row"> -->
+                <nav class="navbar navbar-default ">
+                    <div class="navbar-header">
+                        <!-- Mobile Toggle Menu Button -->
+                        <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+                        <a class="navbar-brand" href="index.html"><span><i class="fa fa-pagelines"></i></span>Gi.La.</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="#" data-nav-section="Home"><span>Home</span></a></li>
+                            <li><a href="#" data-nav-section="Recipes"><span>Recipes</span></a></li>
+                            <li><a href="#" data-nav-section="Gallery"><span>Gallery</span></a></li>
+                            <li><a href="#" data-nav-section="Contact"><span>Contact</span></a></li>
+                            <li><a href="#" data-nav-section="Search"><span><i class="fa fa-search"></i></span></a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- </div> -->
+            </div>
+        </header>
 
-<body>
+        <div id="fh5co-home" data-section="Home">
+            <div class="container">
+                <div class="row row-bottom-padded-lg" id="about-us">
 
-  <div class="container">
-    <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h1 id="title">Getting started with Gulp</h1>
-        <p>Gulp is a command line task runner utilizing Node.js platform. It runs custom defined repetitious tasks and manages process automation. The goal of this tutorial is to introduce main concepts of Gulp and see it in action. We will make a quick project to demonstrate some of the most often tasks you'll encounter. By the end of the tutorial you will be able to apply Gulp to your own project, customize it and be much more efficient.</p>
-      </div>
-    </div>
-  </div>
+                    <div class="col-md-6 to-animate">
+                        <img src="images/img-chef.png" class="img-responsive img-rounded" alt="Chef Gila De Lauren">
+                        <hr style="border-top: 5px solid #00a5a6;">
+                        <h1 class="text-center">Gila De Lauren</h1>
+                        <p class="text-center">She is an Italian-born American chef, writer, television personality, and the host of the current Food Network television program Food Paradise</pclass="text-center">
+                    </div>
+                    <div class="col-md-6 to-animate">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="fh5co-our-recipes" data-section="Recipes">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="fh5co-mb30">
+                            <div class="icon colored-1 text-center"><span><i class="fa fa-shopping-basket"></i></span></div>
+                            <h1 class="text-center">Let's get </br>cooking</h1>
+                        </div>
+                    </div>
+                    <div class="col-md-9 full-width">
+                        <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-mb30">
+                            <div class="fh5co-recipe">
+                                <img src="images/img-deviled-eggs.png" alt="Deviled Eggs" class="img-responsive to-animate">
+                                <h4 class="text-left">Bar Americain's Pickled Shrimp Deviled Egss with Cornichon Remoulade</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-mb30">
+                            <div class="fh5co-recipe">
+                                <img src="images/img-roulade-cover.png" alt="Turkey Roulade" class="img-responsive to-animate">
+                                <h4 class="text-left">Turkey Roulade with "Stovetop" Stuffing</h4>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-mb30">
+                            <div class="fh5co-recipe">
+                                <img src="images/img-fresh-tomato-sauce-cover.png" alt="Pasta with fresh tomate sauce" class="img-responsive  to-animate">
+                                <h4 class="text-left">Pasta with Fresh Tomato Sauce</h4>
+                            </div>
+                        </div>
 
-</body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="assets/script.js"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="fh5co-specials" data-section="Specials">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 section-heading text-center">
+                        <h2 class="single-animate animate-features-1 text-left">Speacials of the season</h2>
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-mb30">
+                                <div class="fh5co-special">
+                                    <h4 class="text-left">Barbeque: Cali Style</h4>
+                                    <img src="images/img-the-ingredients-cover.png" alt="Ingredients barbeque" class="img-responsive to-animate">
+                                    <p class="text-left">You've undoubtedly heard of Carolina Barbeque and Texas BBQ but have you ever tried Santa María Barbeque? Unlike the aforementioned styles, Santa Maria Barbeque doesn't involve long, slow cooking method or sweet sauces, but is instead a menu featuring a well-seasoned California tri-tip cooked over native red oak coals on a special hand-cranked grill, accompanied by pinquinto beans, salsa, green salad and garlic bread.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-mb30">
+                                <div class="fh5co-special">
+                                    <h4 class="text-left">The Perfect Fruitcake</h4>
+                                    <img src="images/img-fruitcake-cover.png" alt="Fruit cake" class="img-responsive to-animate">
+                                    <p class="text-left">The poor, maligned fruit cake...probably one of the most hated cakes in the existence of baking. Is it any wonder? Would you want an incredibly dense, overly sweet, horribly boozy "cake" chock-full of fluorescent colored candied fruit pieces?</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-mb30">
+                                <div class="fh5co-special">
+                                    <h4 class="text-left">Spice- Crusted Salmon: A Holiday Dinner That's As Impressive As It Is Quick</h4>
+                                    <img src="images/img-salmon-cover.png" alt="Crusted Salmon" class="img-responsive to-animate">
+                                    <p class="text-left">Holiday season is well underway, and you know what that means: people are BUSY! With that in mind, I developed a festive recipe that's quick enough to serve on a weeknight (with some make- aheads), and beautiful and impressive enough to serve as the centerpiece for a holiday meal</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="fh5co-restaurants" data-section="restaurants">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 full-width">
+                        <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-mb30">
+                            <div class="fh5co-restaurant">
+                                <h4>DELI BAR</h4>
+                                <div class='wrapper'>
+                                    <img src="images/img-restaurante-1.png" alt="Deli Bar" class="img-responsive to-animate">
+                                    <div class='description'>
+                                        <p class='description_content'><span>156 Lafayette Street.<br>New York, NY 10012. <br>212 677 6400<br> delibar.com</span></p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-mb30">
+                            <div class="fh5co-restaurant">
+                                <h4>BAR NEW YORK</h4>
+                                <div class='wrapper'>
+                                    <img src="images/img-restaurant-2.png" alt="Bar New York" class="img-responsive to-animate">
+                                    <div class='description'>
+                                        <p class='description_content'><span>156 Lafayette Street.<br>New York, NY 10012. <br>212 677 6400<br> delibar.com</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-6 col-xxs-12 fh5co-mb30">
+                            <div class="fh5co-restaurant">
+                                <h4>BAR TOKYO SUN</h4>
+                                <div class='wrapper'>
+                                    <img src="images/img-restaurant-3.png" alt="Bar Tokyo Sun" class="img-responsive to-animate">
+                                    <div class='description'>
+                                        <p class='description_content'><span>156 Lafayette Street.<br>New York, NY 10012. <br>212 677 6400<br> delibar.com</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-3">
+                        <div class="fh5co-mb30">
+                            <div class="icon colored-1 text-center"><span><i class="fa fa-spoon"></i></span></div>
+                            <h1 class="text-center">Restaurants</h1>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="fh5co-blog" data-section="blog">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 section-heading text-left">
+                        <h2 class="single-animate animate-press-1">Guest Blogging</h2>
+                    </div>
+                </div>
+
+                <script id="handlebars-demo" type="text/x-handlebars-template">
+                    {{#each blogs}}
+                    Name : {{Title}} {{Description}}
+                    <br>
+                    {{/each}}
+                </script>
+
+
+                <script id="portfolio-template" type="text/x-handlebars-template">
+                    {{#each blogs}}
+                    <div class="col-md-4">
+                        <!-- Press Item -->
+                        <div class="fh5co-press-item to-animate">
+                            <div class="fh5co-press-img" style="background-image: url(images/img_7.jpg)">
+                            </div>
+                            <div class="fh5co-press-text">
+                                <h3 class="h2 fh5co-press-title">{{Title}} <span class="fh5co-border"></span></h3>
+                                <p>{{Description}} </p>
+
+                            </div>
+                        </div>
+                        <!-- Press Item -->
+                    </div>
+                    {{/each}}
+                </script>
+
+
+
+                <!--<script src="js/handlebars-v4.0.11.js"></script>-->
+                <script src="js/jquery.min.js"></script>
+                <script src="js/GuestBlog.js"></script>
+
+
+                <div class="row" id="content ">
+                </div>
+
+                <!--<div class="row">
+        <div class="col-md-4">
+            <div class="fh5co-press-item to-animate">
+                <div class="fh5co-press-img" style="background-image: url(images/img_7.jpg)">
+                </div>
+                <div class="fh5co-press-text">
+                    <h3 class="h2 fh5co-press-title">Simplicity <span class="fh5co-border"></span></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eius quos similique suscipit dolorem cumque vitae qui molestias illo accusantium...</p>
+                    <p><a href="#" class="btn btn-primary btn-sm">Learn more</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="fh5co-press-item to-animate">
+                <div class="fh5co-press-img" style="background-image: url(images/img_8.jpg)">
+                </div>
+                <div class="fh5co-press-text">
+                    <h3 class="h2 fh5co-press-title">Versatile <span class="fh5co-border"></span></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eius quos similique suscipit dolorem cumque vitae qui molestias illo accusantium...</p>
+                    <p><a href="#" class="btn btn-primary btn-sm">Learn more</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="fh5co-press-item to-animate">
+                <div class="fh5co-press-img" style="background-image: url(images/img_9.jpg);">
+                </div>
+                <div class="fh5co-press-text">
+                    <h3 class="h2 fh5co-press-title">Aesthetic <span class="fh5co-border"></span></h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eius quos similique suscipit dolorem cumque vitae qui molestias illo accusantium...</p>
+                    <p><a href="#" class="btn btn-primary btn-sm">Learn more</a></p>
+                </div>
+            </div>
+        </div>
+
+    </div>-->
+            </div>
+        </div>
+
+        <footer id="footer" role="contentinfo">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-md-6">
+                        <div >
+                            <ul class="nav navbar-nav navbar-left">
+                                <li><a href="#"><span>Contact</span></a></li>
+                                <li><a href="#"><span>Bio</span></a></li>
+                                <li><a href="#"><span>Press</span></a></li>
+                            </ul>
+                        </div>
+                        </div>
+                    <div class="col-md-6">
+                        <p class="text-right">&copy; 2016 Free <a href="index.html">website.com</a></p>
+                    </div>
+                    </div>
+            </div>
+        </footer>
+
+
+
+        <!-- jQuery -->
+        <script src="js/jquery.min.js"></script>
+        <!-- jQuery Easing -->
+        <script src="js/jquery.easing.1.3.js"></script>
+        <!-- Bootstrap -->
+        <script src="js/bootstrap.min.js"></script>
+        <!-- Waypoints -->
+        <script src="js/jquery.waypoints.min.js"></script>
+        <!-- Owl Carousel -->
+        <script src="js/owl.carousel.min.js"></script>
+        <!-- Main JS (Do not remove) -->
+        <script src="js/main.js"></script>
+    </body>
 </html>

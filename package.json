@@ -1,10 +1,15 @@
 {
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.4.0",
+    "gulp-json-srv": "^1.2.0",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8"
+  },
+  "dependencies": {
+    "node-sass": "^4.7.2"
   }
 }

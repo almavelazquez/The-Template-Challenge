@@ -3,17 +3,14 @@
     sass = require('gulp-sass'),
     connect = require('gulp-connect'),
     uglify = require('gulp-uglify'),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
+    jsonServer = require("gulp-json-srv");
 
-var jsSources = ['scripts/*.js'],
-    sassSources = ['styles/*.scss'],
+var jsSources = ['js/*.js'],
+    sassSources = ['sass/*.scss'],
     htmlSources = ['**/*.html'],
     outputDir = 'assets';
 
-
-gulp.task('log', function () {
-    gutil.log('== My First Task ==')
-});
 
 gulp.task('copy', function () {
     gulp.src('index.html')
@@ -54,4 +51,16 @@ gulp.task('html', function () {
         .pipe(connect.reload())
 });
 
-gulp.task('default', ['html', 'js', 'sass', 'connect', 'watch']);
+
+
+
+
+var server = jsonServer.create({ port: 8080,});
+
+gulp.task("start", function () {
+    return gulp.src("GuestBlogs.json")
+        .pipe(server.pipe());
+});
+
+
+gulp.task('default',  ['start','html', 'js', 'sass', 'connect', 'watch']);
