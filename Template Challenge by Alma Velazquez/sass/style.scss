@@ -325,10 +325,12 @@ h1, h2, h3, h4, h5, h6 {
 #fh5co-recipes,
 #fh5co-specials,
 #fh5co-restaurants,
-#fh5co-press {
+#fh5co-blog {
     padding-top: 50px;
 }
-
+#fh5co-blog {
+    padding-bottom:50px;
+}
 // Burger Menu
 .fh5co-nav-toggle {
     width: 25px;
@@ -558,3 +560,70 @@ h1, h2, h3, h4, h5, h6 {
         margin: 0px
     }
 }
+
+
+
+#fh5co-blog {
+ 
+    .fh5co-blog-item {
+
+        .card-title {
+            padding: 10px;
+            margin-top: 0px;
+            color: white;
+            height: 50px;
+        }
+
+        .card-text {
+            padding: 10px;
+            color: $brand-darker;
+            font-size: small;
+        }
+    }
+
+    #guest-blogging >  div:nth-child(odd) {
+        .card-block {
+            background: $brand-primary-clear
+        }
+
+        .card-title {
+            background: $brand-primary;
+        }
+    }
+
+    #guest-blogging > div:nth-child(even) {
+        .card-block {
+            background: $brand-secondary-clear
+        }
+
+        .card-title {
+            background: $brand-secondary;
+        }
+    }
+}
+
+
+#fh5co-blog {
+
+    .fh5co-video-item {
+        background: $brand-white !important;
+
+        .fh5co-video-text {
+            .card-title {
+                padding: 10px;
+                margin-top: 0px;
+                color: $brand-primary;
+                height: 50px;
+            }
+
+            .card-text {
+                padding: 10px;
+                color: $brand-darker;
+                font-size: small;
+            }
+        }
+    }
+}
+
+
+  

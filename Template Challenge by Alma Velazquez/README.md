@@ -1,3 +1,3 @@
-# Getting Started With Gulp
+# The template challenge 
 
-Gulp example app for the tutorial
+Alma Cecilia Velázquez Reyna

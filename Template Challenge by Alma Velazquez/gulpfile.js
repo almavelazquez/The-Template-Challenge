@@ -4,7 +4,9 @@
     connect = require('gulp-connect'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
-    jsonServer = require("gulp-json-srv");
+    jsonServer = require("gulp-json-srv"),
+    minify = require('gulp-minify'),
+    imagemin = require('gulp-imagemin');
 
 var jsSources = ['js/*.js'],
     sassSources = ['sass/*.scss'],
@@ -51,9 +53,24 @@ gulp.task('html', function () {
         .pipe(connect.reload())
 });
 
+gulp.task('compress', function () {
+    gulp.src(jsSources)
+        .pipe(minify({
+            ext: {
+                src: '-debug.js',
+                min: '.js'
+            },
+            exclude: ['tasks'],
+            ignoreFiles: ['.combo.js', '-min.js']
+        }))
+        .pipe(gulp.dest('dist'))
+});
 
-
-
+gulp.task('images', function () {
+    gulp.src('/images/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('assets/images'))
+});
 
 var server = jsonServer.create({ port: 8080,});
 
@@ -63,4 +80,4 @@ gulp.task("start", function () {
 });
 
 
-gulp.task('default',  ['start','html', 'js', 'sass', 'connect', 'watch']);
+gulp.task('default', ['start', 'html', 'js', 'compress', 'sass', 'images', 'connect', 'watch']);

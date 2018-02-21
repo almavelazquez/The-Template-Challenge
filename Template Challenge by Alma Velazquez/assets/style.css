@@ -189,8 +189,11 @@ h1, h2, h3, h4, h5, h6 {
 #fh5co-recipes,
 #fh5co-specials,
 #fh5co-restaurants,
-#fh5co-press {
+#fh5co-blog {
   padding-top: 50px; }
+
+#fh5co-blog {
+  padding-bottom: 50px; }
 
 .fh5co-nav-toggle {
   width: 25px;
@@ -356,3 +359,38 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px;
   color: white;
   margin: 0px; }
+
+#fh5co-blog .fh5co-blog-item .card-title {
+  padding: 10px;
+  margin-top: 0px;
+  color: white;
+  height: 50px; }
+
+#fh5co-blog .fh5co-blog-item .card-text {
+  padding: 10px;
+  color: #444;
+  font-size: small; }
+
+#fh5co-blog #guest-blogging > div:nth-child(odd) .card-block {
+  background: #e9fa77; }
+
+#fh5co-blog #guest-blogging > div:nth-child(odd) .card-title {
+  background: #a3ba05; }
+
+#fh5co-blog #guest-blogging > div:nth-child(even) .card-block {
+  background: #4dcaca; }
+
+#fh5co-blog #guest-blogging > div:nth-child(even) .card-title {
+  background: #00a6a6; }
+
+#fh5co-blog .fh5co-video-item {
+  background: #fff !important; }
+  #fh5co-blog .fh5co-video-item .fh5co-video-text .card-title {
+    padding: 10px;
+    margin-top: 0px;
+    color: #a3ba05;
+    height: 50px; }
+  #fh5co-blog .fh5co-video-item .fh5co-video-text .card-text {
+    padding: 10px;
+    color: #444;
+    font-size: small; }

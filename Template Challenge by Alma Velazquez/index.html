@@ -193,87 +193,129 @@
 
         <div id="fh5co-blog" data-section="blog">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-12 section-heading text-left">
+                <div class="row" >
+                    <div class="col-md-12 text-left">
                         <h2 class="single-animate animate-press-1">Guest Blogging</h2>
                     </div>
-                </div>
-
-                <script id="handlebars-demo" type="text/x-handlebars-template">
-                    {{#each blogs}}
-                    Name : {{Title}} {{Description}}
-                    <br>
-                    {{/each}}
-                </script>
-
-
-                <script id="portfolio-template" type="text/x-handlebars-template">
-                    {{#each blogs}}
-                    <div class="col-md-4">
-                        <!-- Press Item -->
-                        <div class="fh5co-press-item to-animate">
-                            <div class="fh5co-press-img" style="background-image: url(images/img_7.jpg)">
-                            </div>
-                            <div class="fh5co-press-text">
-                                <h3 class="h2 fh5co-press-title">{{Title}} <span class="fh5co-border"></span></h3>
-                                <p>{{Description}} </p>
+                    <div id="guest-blogging"> </div>
+                    <!--<div class="col-sm-4">
+                        <div class="card fh5co-blog-item">
+                            <div class="card-block fh5co-blog-text">
+                                <h4 class="card-title">Special title treatment</h4>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 
                             </div>
                         </div>
-                        <!-- Press Item -->
                     </div>
-                    {{/each}}
-                </script>
+                    <div class="col-sm-4">
+                        <div class="card fh5co-blog-item">
+                            <div class="card-block fh5co-blog-text">
+                                <h4 class="card-title">Special title treatment</h4>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card fh5co-blog-item">
+                            <div class="card-block fh5co-blog-text">
+                                <h4 class="card-title">Special title treatment</h4>
+                                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
 
-
-                <!--<script src="js/handlebars-v4.0.11.js"></script>-->
-                <script src="js/jquery.min.js"></script>
-                <script src="js/GuestBlog.js"></script>
-
-
-                <div class="row" id="content ">
+                            </div>
+                        </div>
+                    </div>-->
                 </div>
 
-                <!--<div class="row">
-        <div class="col-md-4">
-            <div class="fh5co-press-item to-animate">
-                <div class="fh5co-press-img" style="background-image: url(images/img_7.jpg)">
-                </div>
-                <div class="fh5co-press-text">
-                    <h3 class="h2 fh5co-press-title">Simplicity <span class="fh5co-border"></span></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eius quos similique suscipit dolorem cumque vitae qui molestias illo accusantium...</p>
-                    <p><a href="#" class="btn btn-primary btn-sm">Learn more</a></p>
+
+
+                    
+                    <!--<script src="js/handlebars-v4.0.11.js"></script>-->
+                    <script src="js/jquery.min.js"></script>
+                    <!--<script type="text/javascript">
+
+                        var html = '';
+                        $.get('http://localhost:8080/blogs', function (data) {
+                            $.each(data, function (i, item) {
+                                html += '<div class="col-sm-4">';
+                                html += '<div class="card fh5co-blog-item">';
+                                html += '<div class="card-block fh5co-blog-text">';
+                                html += '<h4 class="card-title">' + item.Title + '</h4>';
+                                html += '<p class="card-text">' + item.Description + '</p>';
+                                html += '</div></div></div>';
+                                $('#guest-blogging').html(html);
+                            });
+                        }); // end get
+
+                    </script>-->
+                    <script type="text/javascript">
+
+                        var html = '';
+                        $.get('http://localhost:8080/blogs', function (data) {
+                            $.each(data, function (i, item) {
+                                if (item.Image == "") {
+                                    html += '<div class="col-sm-4">';
+                                    html += '<div class="card fh5co-blog-item">';
+                                    html += '<div class="card-block fh5co-blog-text">';
+                                    html += '<h4 class="card-title">' + item.Title + '</h4>';
+                                    html += '<p class="card-text">' + item.Description + '</p>';
+                                    html += '</div></div></div>';
+                                    $('#guest-blogging').html(html);
+                                }
+                                else {
+                                    html += '<div class="col-sm-4">';
+                                    html += '<div class="card fh5co-video-item">';
+                                    html += '<div class="card-block fh5co-video-text">';
+                                    html += '<h4 class="card-title">' + item.Title + '</h4>';
+                                    html += '<img class="card-img" src="images/'+item.Image+'">';
+                                    html += '<p class="card-text">' + item.Description + '</p>';
+                                    html += '</div></div></div>';
+                                    $('#guest-blogging').html(html);
+                                }
+                                
+                            });
+                        }); // end get
+
+                    </script>
+
+
+
+                    <script id="handlebars-demo" type="text/x-handlebars-template">
+                        {{#each blogs}}
+                        Name : {{Title}} {{Description}}
+                        <br>
+                        {{/each}}
+                    </script>
+
+
+                    <script id="portfolio-template" type="text/x-handlebars-template">
+                        {{#each blogs}}
+                        <div class="col-md-4">
+                            <!-- Press Item -->
+                            <div class="fh5co-press-item to-animate">
+                                <div class="fh5co-press-img" style="background-image: url(images/img_7.jpg)">
+                                </div>
+                                <div class="fh5co-press-text">
+                                    <h3 class="h2 fh5co-press-title">{{Title}} <span class="fh5co-border"></span></h3>
+                                    <p>{{Description}} </p>
+
+                                </div>
+                            </div>
+                            <!-- Press Item -->
+                        </div>
+                        {{/each}}
+                    </script>
+
+
+
+
+
+
+
+
+
                 </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="fh5co-press-item to-animate">
-                <div class="fh5co-press-img" style="background-image: url(images/img_8.jpg)">
-                </div>
-                <div class="fh5co-press-text">
-                    <h3 class="h2 fh5co-press-title">Versatile <span class="fh5co-border"></span></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eius quos similique suscipit dolorem cumque vitae qui molestias illo accusantium...</p>
-                    <p><a href="#" class="btn btn-primary btn-sm">Learn more</a></p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="fh5co-press-item to-animate">
-                <div class="fh5co-press-img" style="background-image: url(images/img_9.jpg);">
-                </div>
-                <div class="fh5co-press-text">
-                    <h3 class="h2 fh5co-press-title">Aesthetic <span class="fh5co-border"></span></h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis eius quos similique suscipit dolorem cumque vitae qui molestias illo accusantium...</p>
-                    <p><a href="#" class="btn btn-primary btn-sm">Learn more</a></p>
-                </div>
-            </div>
-        </div>
-
-    </div>-->
-            </div>
-        </div>
 
         <footer id="footer" role="contentinfo">
             <div class="container">
